@@ -51,14 +51,17 @@ function filterTodo(e){
   todos.forEach(function(todo){
     switch(e.target.value){
       case "all":
+        todo.style.display="block";
         break;
       case "completed":
         if(todo.classList.contains('completed')){
-          todo.style.display='flex';
+          todo.style.display="block";
         }
         else{
           todo.style.display="none";
         }
+        case "uncompleted":
+          
     }
   });
 
