@@ -1,8 +1,8 @@
 //selectors
-var weightInput1=document.getElementsByClassName('.weightinput1');
-var heightInput1=document.getElementsByClassName('.heightinput1');
-var weightInput2=document.getElementsByClassName('.weightinput2');
-var heightInput2=document.getElementsByClassName('.heightinput2');
+var weightInput1=document.querySelector('.weightinput1');
+var heightInput1=document.querySelector('.heightinput1');
+var weightInput2=document.querySelector('.weightinput2');
+var heightInput2=document.querySelector('.heightinput2');
 const mybutton=document.getElementById("myBtn");
 
 //event selector
@@ -10,13 +10,25 @@ mybutton.addEventListener('click',printOutput);
 
 //function
 function printOutput(e){
-    
+    e.preventDefault();
+    //person 1 BMI
     let divider1=Math.pow(heightInput1.value,2);
     let result1=(weightInput1.value/divider1);
     let bmi1=result1.toString();
-
+    //person 2 BMI
+    let divider2=Math.pow(heightInput2.value,2);
+    let result2=(weightInput2.value/divider2);
+    let bmi2=result2.toString();
+    console.log("THE BMI APP STARTS HERE .... ")
     console.log("The Bmi of person 1 is ",bmi1);
+    console.log("The BMI of person 2 is ",bmi2);
+    if(bmi1>bmi2){
+        console.log("Person 1 BMI is greater than person 2")
+    } else{
+        console.log("Person 2 BMI is greater than person 1 ")
+    }
 }
+
 //hw question 2 code
 var personInformation={
     name: 'Bebo',
