@@ -17,7 +17,7 @@ function printOutput(e){
 
     console.log("The Bmi of person 1 is ",bmi1);
 }
-
+//hw question 2 code
 var personInformation={
     name: 'Bebo',
     age:20,
@@ -44,7 +44,7 @@ var personInformation={
         currentlyWorking:false,
     },
 };
-console.log("The HW 1 question 2 answer is as follows click on the button for question 1 will be shoed from 3rd output")
+console.log("The HW 1 question 2 answer is as follows click on the button for question 1 will be showed from 3rd output");
 console.log("Hi, my name is",personInformation.name, "I am", personInformation.age," years old. My present address is", personInformation.address.presentAddress.street,personInformation.address.presentAddress.city,
 " I took my",personInformation.educattion[0]," from", personInformation.educattion[1],". I am currently working in ",
  personInformation.experience.companyName," as a",personInformation.experience.role,".");
