@@ -5,9 +5,9 @@
 This repository contains HTML and CSS to create basic web pages to advanced usages of JAVA Script to modify web pages. Starting from creating a variable in JS to DOM manupulation
 
 ### Applications
-- BMI App (Cosnole Output)
+- BMI App (Console Output)
 - Resume structure (HTML CSS)
-- TODO list App (DOM Output)
+- TO-DO list App (DOM Output)
 
 ### Languages Used
 
