@@ -1,3 +1,5 @@
+
+
 let str='ababcd';
 let countA=0;
 let countB=0;
@@ -33,6 +35,7 @@ for(let i=0;i<length;i++){
         console.log("The frequency of", str.charAt(i)," is ",num);
     } 
 }
+
 
 
 
@@ -133,14 +136,85 @@ console.log("The string after reverse ",revArr.join(""));
 
     let queue=[1,3];
     let qLength=10;
-    let front=rear=0;
+    let front=rear=-1;
 
     function enqueue(el)
     {
-        queue.push(el);
-        console.log=("The queue after enqueue is "+queue);
+        if(rear>=qLength-1){
+            console.log("overflow");
+        }
+        else if(front == rear==-1){
+            front=rear=0;
+            queue.push(el);
+            console.log=("The queue after enqueue is "+queue);
+        }
+        else{
         rear++;
+        queue.push(el);
+        console.log("The queue after enqueue is "+queue);
+        
+        }
     }
-    enqueue(el);
 
+    enqueue(20);
+    function size(any){
+        console.log("Size of the queue is ",any.length);
+    }
+    size(queue);
+    function dequeue(){
+        if(front == rear==-1){
+            console.log("Queue is empty");
+        } else if(front==rear){
+            front=rear=-1;
+        }
+        else{  
+        console.log("The element after dequeue "+queue[0] );    
+        front++;
+        for (let i = 0; i < queue.length; i++) { 
+            queue[i] = queue[i + 1]; 
+            //queue.length--;
+        }
+        queue.length--;
+        console.log("The queue after dequeue is "+queue); 
+        }
+        
+    }
+    dequeue();
 
+    queue=[];
+    //Problem 9
+    function decimalToBinary(any){
+       // console.log("The binary of "+any+" is "+any.toString(2));
+        for(let i=1;i<=any;i++){
+            var bin=i.toString(2);
+            queue.push(bin);
+
+        }
+        console.log("The binary from 1 to 10 : ")
+        console.log(queue);
+    }
+    decimalToBinary(10);
+//HASH TABLE
+//problem 10  
+str='ababcd';
+var frequency={};
+// function hashFunc(c){
+//     return(c-'a');
+// }
+function countStr(str){
+    for(let i=0;i<str.length;i++){
+        //let c=str.charAt(i);
+        let index=str[i];
+        if(frequency[index]=undefined){
+            frequency[index]=0;
+        }
+        frequency[index]++;
+    }
+    for(let i=0;i<26;i++){
+        console.log(" frequency "+frequency[i]);
+    }
+
+}
+countStr(str);
+
+//problem 11

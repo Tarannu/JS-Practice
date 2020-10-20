@@ -20,6 +20,7 @@ function binarySearch(sortedArray,element){
     let end=sortedArray.length-1;
     let result='false';
     while(start<=end){
+        
     let mid=start+(end-1)/2;
     if(sortedArray[mid]===element){
         result='true';
