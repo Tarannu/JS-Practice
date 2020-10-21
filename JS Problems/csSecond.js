@@ -198,23 +198,70 @@ console.log("The string after reverse ",revArr.join(""));
 //problem 10  
 str='ababcd';
 var frequency={};
-// function hashFunc(c){
-//     return(c-'a');
-// }
+function hashFunc(c){
+    return(c-'a');
+}
 function countStr(str){
     for(let i=0;i<str.length;i++){
         //let c=str.charAt(i);
-        let index=str[i];
-        if(frequency[index]=undefined){
+        let index=hashFunc(str[i]);
+        if(frequency[index]=='undefined'){
             frequency[index]=0;
         }
         frequency[index]++;
     }
     for(let i=0;i<26;i++){
-        console.log(" frequency "+frequency[i]);
+        
+        console.log(" frequency "+frequency[i]) // why cant I print the frequency index i?
     }
 
 }
 countStr(str);
-
+//Linked list
 //problem 11
+function LinkedList(){
+    var length=0;
+    var head=null;
+    var Node=function(element){
+        this.element=element;
+        this.next=null;
+    };
+    this.head=function(){
+        return head;
+    }
+    this.size=function(){
+        return length;
+    }
+    this.addAtHead=function(element){
+        var prev=new Node();
+        var newNode=new Node();
+        prev=head;
+        head=newNode;
+        head.next=prev;
+        size++;
+    }
+    this.deleteFromHead=function(){
+
+        head=head.next;
+        size--;       
+
+    }
+    // this.printList=function(){
+    //     var curr=this.head;
+    //     var str="";
+    //     while(curr){
+    //         str+=curr.element+"";
+    //         curr=curr.next
+    //     }
+    //     console.log(str);
+
+    // }
+
+}
+var ll=new LinkedList();
+ll.addAtHead(10);
+ll.addAtHead(20);
+ll.deleteFromHead();
+console.log(ll);
+
+
