@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Food Order</title>
+        <Header><h1>Order your food in the form</h1></Header>
+    </head>
+    <body>
+        <div id='order-form'>
+            <p>Name : <input type="text" id="name"></p>
+            <p>Ordered Food dropdown:
+                <select id="dropdown-menu">
+                <option value="Burger">Burger $10</option>
+                <option value="Sandwich">Sandwich $10</option>
+                <option value="Tuna Sandwich">Tuna Sandwich $5</option>
+                <option value="Salad">Salad $15</option>
+                </select>
+                <br>
+            </p>
+            <p> Paid ammount : <input  type="number" id="paid-ammount"></p>
+            <button id="dispatch-button">Dispatch</button>
+            <h3>Pending Order Table</h3>
+            <table id="pending-order">
+                <tr >
+                    <th style="color: red">Name</th>
+                    <th style="color: red">Order Name</th>
+                    <th style="color: red">Paid</th>
+                    <th style="color: red">Change</th>
+                    <th style="color: red">Click Completed</th>
+                 <!--<th style="color: red">Complete Button</th> -->
+                </tr>
+                
+            </table>
+            <!--<button id="add-to-ordered">Mark Complete</button>-->
+            <h3>Completed Order Table</h3>
+            <table id="Completed-order">
+                <th style="color: blue" >Name</th>
+                <th style="color: blue">Order Name</th>
+                <th style="color: blue">Paid</th>
+            </table>
+        </div>
+        <script src="foodorder.js"></script>
+        <link href="foodorder.css" rel="stylesheet" type="text/css">
+    </body>
+</html>

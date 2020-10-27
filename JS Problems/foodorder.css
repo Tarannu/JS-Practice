@@ -1,0 +1,27 @@
+#pending-order,td{
+    
+    color:black;
+    padding:8px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th{
+    height:50px;
+    color:black;
+    padding:8px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#completed-order{
+    height:50px;
+    color:blue;
+    padding:8px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
