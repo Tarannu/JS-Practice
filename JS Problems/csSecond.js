@@ -1,5 +1,3 @@
-
-
 let str='ababcd';
 let countA=0;
 let countB=0;
@@ -198,36 +196,85 @@ console.log("The string after reverse ",revArr.join(""));
 //problem 10  
 str='ababcd';
 
-const hashtable={
-    
-}
-
-
+const hashtable={}   
 
 function findDuplicates(str){
     
-    for(i='a';i<='z';i++){
-        hashtable[i]=0;
-
-    }
     
-    for(let i=0;i<str.length;i++){
-       if(hashtable[i]===str.charAt(i)){
-           hashtable[i]++;
-       }
+        for(let i=0;i<str.length;i++){
+            var character=str.charAt(i);
+            if(hashtable[character]){
+                hashtable[character]++;
+            }
+            else{
+                hashtable[character]=1;
+            }
+            
 
-
-    }
-    console.log("Hashtable contents ",hashtable)
-        
-        
-      
-
-}
+        }
+        console.log("Frequency of contents ",hashtable)
+};
 findDuplicates(str);
 
+function findTwoSum(arr,sum){
+    var result=[];
+    for(let i=0;i<arr.length;i++){
+        hashtable[i]=arr[i];
+    }
+    console.log(hashtable);
+
+    for(let i=0;i<arr.length;i++){
+        var difference=sum-arr[i];
+        //console.log("arr element", difference);
+        if(hashtable[i]==difference&&hashtable[i]!=i){ 
+            result[0]=hashtable[difference];
+            result[1]=sum-hashtable[difference];
+        }
+    }
+    console.log('The following two numbers ',result," create sum of ",sum );           
+
+}
+
+var twoSumArray=[8,7,2,5,3,2]
+var target=10;
+
+findTwoSum(twoSumArray,target);
 //Linked list
 //problem 11
+class ListNode{
+    constructor(data){
+        this.data=data;
+        this.next=null;
+    }
+}
+class LinkedList{
+    constructor(head){
+        this.head=head;
+    }
+}
+let node1= new ListNode(2);
+let node2= new ListNode(5);
+let node3=new ListNode(10);
+node1.next=node2;
+node2.next=node3;
+
+let list=new LinkedList(node1);
+console.log("The next in the node is ",list.head.next.data);
+
+function addToListHead(list,num){
+    let newNode=new ListNode(num);
+    newNode.next=list;
+    list.head=newNode;
+    console.log("The next in the node is after addition ",list.head.next.data);
+};
 
 
+addToListHead(list,21);
+function removeFromList(list){
+    head=list.next;
+    list.next=null;
+    console.log("The next in the node is after deletion ",list.head.next.data);
+    
+};
+removeFromList(list);
 
