@@ -35,27 +35,33 @@ function addPendingTable(){
         return change;
     }
     let change=changeCalculation();
-    console.log(typeof(change));
-
-   
     
-    var htmlContent=`<tr><td>${nameInput.value}</td><td>${selectionInput}</td><td>${paidInput.value}</td><td>${change}</td><td><button id="delete-button">Delete</button></td></tr>`;
-
-    //adding values to table pending
-    pendingTable.insertAdjacentHTML('beforeend',htmlContent);
+    //creating elements for pennding table
+    var deleteButton=`<td><button id="delete-button"> Complete </button></td>`;
+    
+    var newPendingTableRow=pendingTable.insertRow(pendingTable.length);
+    cell1=newPendingTableRow.insertCell(0);
+    cell2=newPendingTableRow.insertCell(1);
+    cell3=newPendingTableRow.insertCell(2);
+    cell4=newPendingTableRow.insertCell(3);
+    cell5=newPendingTableRow.insertCell(4);
+    //adding elements in the cells of the table
+    cell1.innerHTML=nameInput.value;
+    cell2.innerHTML=selectionInput;
+    cell3.innerHTML=paidInput.value;
+    cell4.innerHTML=change;
+    cell5.innerHTML=deleteButton;
+    
+    /*var htmlContent=`<tr><td>${nameInput.value}</td><td>${selectionInput}</td><td>${paidInput.value}</td><td>${change}</td><td><button id="delete-button">Delete</button></td></tr>`;    //adding values to table pending
+     pendingTable.insertAdjacentHTML('beforeend',htmlContent);*/
     
 }
- //the delete button function
- function deleteFromList(){
-    
-    for(let i=0;i<pendingTable.rows.length;i++){
-        var index=this.parentElement.rowIndex;
-        pendingTable.deleteRow(index);    
-        console.log(index);
-    
-    }
-    
+ 
+function deleteRow(row){
+    var i=row.parentNode.rowIndex;
+    pendingTable.deleteRow(i);
 }
+ 
 function addOrderTable(){
     
 }
@@ -63,5 +69,5 @@ function addOrderTable(){
 
 //Event Handlers
 dispatchButton.addEventListener('click',addPendingTable);
-deleteRow.addEventListener('click',deleteFromList);
+deleteButton.addEventListener('click',deleteRow(this));
 //addToOderButton.addEventListener('click',addOrderTable);

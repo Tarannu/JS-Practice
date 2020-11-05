@@ -115,22 +115,22 @@ console.log("The string after reverse ",revArr.join(""));
     pop(stack);
 
     //Problem 7
-    // function reverse(any){
-    //     let strStack=[];
-    //     console.log("string before reverse in stack "+any);
-    //     let rev='';
-    //     for(let i=0;i<=any.length;i++){
-    //         strStack.push(any);
-    //     }
-    //      for(let i=any.length-1;i>0;i--){
+    function reverse(any){
+        let strStack=[];
+        console.log("string before reverse in stack "+any);
+        let rev=[];
+        for(let i=0;i<=any.length;i++){
+            strStack.push(any);
+        }
+         for(let i=any.length-1;i>0;i--){
             
-    //         rev.push(strStack);
-    //        // break;
-    //     }
+            rev.push(strStack);
+           // break;
+        }
 
-    //     console.log("String after reverse "+rev);
-    // }
-    // reverse(str);
+        console.log("String after reverse "+rev);
+    }
+     reverse(str);
 
     //problem 8
 
@@ -197,71 +197,37 @@ console.log("The string after reverse ",revArr.join(""));
 //HASH TABLE
 //problem 10  
 str='ababcd';
-var frequency={};
-function hashFunc(c){
-    return(c-'a');
+
+const hashtable={
+    
 }
-function countStr(str){
+
+
+
+function findDuplicates(str){
+    
+    for(i='a';i<='z';i++){
+        hashtable[i]=0;
+
+    }
+    
     for(let i=0;i<str.length;i++){
-        //let c=str.charAt(i);
-        let index=hashFunc(str[i]);
-        if(frequency[index]=='undefined'){
-            frequency[index]=0;
-        }
-        frequency[index]++;
+       if(hashtable[i]===str.charAt(i)){
+           hashtable[i]++;
+       }
+
+
     }
-    for(let i=0;i<26;i++){
+    console.log("Hashtable contents ",hashtable)
         
-        console.log(" frequency "+frequency[i]) // why cant I print the frequency index i?
-    }
+        
+      
 
 }
-countStr(str);
+findDuplicates(str);
+
 //Linked list
 //problem 11
-function LinkedList(){
-    var length=0;
-    var head=null;
-    var Node=function(element){
-        this.element=element;
-        this.next=null;
-    };
-    this.head=function(){
-        return head;
-    }
-    this.size=function(){
-        return length;
-    }
-    this.addAtHead=function(element){
-        var prev=new Node();
-        var newNode=new Node();
-        prev=head;
-        head=newNode;
-        head.next=prev;
-        size++;
-    }
-    this.deleteFromHead=function(){
 
-        head=head.next;
-        size--;       
-
-    }
-    // this.printList=function(){
-    //     var curr=this.head;
-    //     var str="";
-    //     while(curr){
-    //         str+=curr.element+"";
-    //         curr=curr.next
-    //     }
-    //     console.log(str);
-
-    // }
-
-}
-var ll=new LinkedList();
-ll.addAtHead(10);
-ll.addAtHead(20);
-ll.deleteFromHead();
-console.log(ll);
 
 
