@@ -22,7 +22,7 @@ function addTable(){
     }
 
     //creating table values
-    var htmlContent=`<tr><td>${studentNameInput.value}</td> <td>${studentAgeInput.value}</td> <td>${studentPhoneInput.value}</td><td>${studentAddressInput.value}</td></tr>`
+    var htmlContent=`<tr><td>${studentNameInput.value}</td> <td>${studentAgeInput.value}</td> <td>${studentPhoneInput.value}</td><td>${studentAddressInput.value}</td><td><button class="delete-button">Delete</button></td></tr>`
     
     //Adding values to table
     
@@ -35,6 +35,13 @@ function addTable(){
     studentPhoneInput.value='';
        
 }
+var deleteButton=document.getElementById('student-table');
+function deleteRow(e){
+if(e.target.className==='delete-button'){
+    var row=e.target.parentElement.parentElement;
+    e.target.parentElement.parentElement.remove(row);
+}
+}
 // function addTHead(){
 //     var thead=`<tr><th> Name </th><th> Age </th><th> Phone Number </th><th> Address </th></tr>`
 //     tableInput.insertAdjacentHTML('afterbegin',thead);
@@ -43,3 +50,4 @@ function addTable(){
 //event handlers
 
 addButton.addEventListener('click',addTable);
+deleteButton.addEventListener('click',deleteRow);
