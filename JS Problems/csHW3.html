@@ -7,7 +7,48 @@
     </header>
 
 <body>
+    <h3>BubbleSort pseudocode</h2>
+    <p id="bubblesort pseudocode">
+    do<br>
+        swapped=false;<br>
+        for i=1 to indexOfLastUnswappedElement-1<br>
+        if ( leftElement>rightElement )<br>
+        swap(leftElement,rightElement)<br>
+        swapped=true;<br>
+    while swapped
+    </p>
+    <h3>Selection Sort</h3>
+    <p>
+        repeat upto number of elements -1 times<br>
+        set first element = minimum<br>
+        if(currentElement < Minumum ) <br>
+        set currentElement = minimum <br>
+        swap minimum with current unswappped position<br>
 
+    </p>
+    <h3>Merge Sort </h3>
+    <p>
+        Split list into halves<br>
+        Sort Each Half until<br>
+        If a list has one element its sorted<br>
+        Else split list in half and sort<br>
+        Merge two elements when sorted in a sorted manner
+
+    </p>
+    <h3>Binary Search tree inserting element</h3>
+    <p>
+        Steps<br>
+        1. Start at root<br>
+        2. if(element< root) <br>
+        move left<br>
+        else <br>
+        move right<br>
+        3. At leaf node<br>
+        if(element< Current)<br>
+        insert at left<br>
+        else insert at right<br>
+        The time complaxity for this whole operation is <b>O(logn)</b><br>
+    </p>
     <script src="csHW3.js"></script>
 </body>
 </html>

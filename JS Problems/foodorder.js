@@ -3,7 +3,7 @@ var nameInput=document.getElementById('name');
 var selectionInput=document.getElementById('dropdown-menu').value;
 var paidInput=document.getElementById('paid-ammount');
 var pendingTable=document.getElementById('pending-order');
-var orderedTable=document.getElementById('completed-order');
+var orderedTable=document.getElementById('Completed-order');
 var dispatchButton=document.getElementById('dispatch-button');
 var addToOderButton=document.getElementById('add-to-ordered');
 
@@ -35,23 +35,7 @@ function addPendingTable(){
         var change=paidInput.value-selectPrice;
         return change;
     }
-    let change=changeCalculation();
-    
-    //creating elements for pennding table
-    //var deleteButton=`<td><button id="delete-button"> Complete </button></td>`;
-    // var newPendingTableRow=pendingTable.insertRow(pendingTable.length);
-    // cell1=newPendingTableRow.insertCell(0);
-    // cell2=newPendingTableRow.insertCell(1);
-    // cell3=newPendingTableRow.insertCell(2);
-    // cell4=newPendingTableRow.insertCell(3);
-    // cell5=newPendingTableRow.insertCell(4);
-    // //adding elements in the cells of the table
-    // cell1.innerHTML=nameInput.value;
-    // cell2.innerHTML=selectionInput;
-    // cell3.innerHTML=paidInput.value;
-    // cell4.innerHTML=change;
-    // cell5.innerHTML=deleteButton;
-    
+    let change=changeCalculation();   
     var htmlContent=`<tr><td>${nameInput.value}</td><td>${selectionInput}</td><td>${paidInput.value}</td><td>${change}</td><td><button class="delete-button">Delete</button></td></tr>`;    //adding values to table pending
     pendingTable.insertAdjacentHTML('beforeend',htmlContent); 
     nameInput.value='';
@@ -63,28 +47,27 @@ var deleteButton=document.getElementById('pending-order');
 function deleteRow(e){
 if(e.target.className==='delete-button'){
     var row=e.target.parentElement.parentElement;
+    console.log(row);
     e.target.parentElement.parentElement.remove(row);
-}
-addOrderTable(e);
+    
+};
+addOrderTable(row);
 }
  
-function addOrderTable(e){
+function addOrderTable(row){
     // if(e.target.className==='delete-button'){
     //     var row=e.target.parentElement.parentElement;
     //     orderedTable.insertRow(row);
     // }
-    var newRow=orderedTable.insertRow(orderedTable.length);
-    cell1=newRow.insertCell(0);
-    cell2=newRow.insertCell(1);
-    cell3=newRow.insertCell(2);
-    //add value to the cells
-    if(e.target.className==='delete-button'){
-        for(let i=0;i<=newRow.length;i++){
-        newRow.innerCell(i).innerHTML=e.target.parentElement.parentElement;
-        }
-    }   
-
-
+    orderedTable.insertAdjacentElement('beforeend',row);
+    // var newRow=orderedTable.insertRow(orderedTable.length);
+    // cell1=newRow.insertCell(0);
+    // cell2=newRow.insertCell(1);
+    // cell3=newRow.insertCell(2);
+    // //add value to the cells
+    // cell1.innerHTML=row.cell[0].innerHTML;
+    // cell2.innerHTML=e.target.childNodes[1];
+    // cell3.innerHTML=e.target.childNodes[2];
 }
 
 

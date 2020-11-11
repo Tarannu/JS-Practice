@@ -1,0 +1,27 @@
+<html>
+    <header>
+        <title>HW 4</title>
+    <h1>JS HW 4</h1>
+    </header>
+    <body>
+    <h3>Question 1 </h3>
+    <p>
+        The apply() method takes arguments using array whereas call() method takes arguments
+        separated by commas.<br>
+        For examples: <br>
+        let p:{function fullname(address1,address2){<br>
+            console.log(this.fName+this.lastName+address1+address2)<br>
+        }<br>
+        }<br>
+        var person1{<br>
+            fName:"Fahad",<br>
+            lName:"Ahmed"
+        }<br>
+
+        var x=p.fullname.call(person1,"India","Pakistan");<br>
+        var y=p.fullname.apply(person1,[India,Pakistan]);
+
+    </p>
+        <script src='jshw4.js'></script>
+    </body>
+</html>
