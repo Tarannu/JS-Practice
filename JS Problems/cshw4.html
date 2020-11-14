@@ -1,0 +1,45 @@
+<html>
+    <header>
+        <title>HW4</title>
+        <h1>CS HW 4</h1>
+    </header>
+    <body>
+        <h3>Graph Data Structure</h3>
+        <p>
+            <b>A graph data structure</b> is a nonlinear data structure consisting of nodes and vertices. It contains a finite set of nodes and vertices whiche are connected to each other.<br>
+            <b>The common terminologies </b> used in graph are root, nodes, vertices, edge, parent node, child node, tree, leaf etc.
+            <b>Types of graphs</b> there are many types some of them are as follows:
+            <li> Undirected Graph: Its a graph where edges are bidirectional meaning the edges have no specific direction. </li>
+            <li>Directed Graph: The edges are uni-directional or point to one specific direction</li>
+            <li>Tree: Is an undirected graph </li>    
+            <li>Weighte Graph: Each edge has beena assigned a value</li>
+            <br>
+            <b>Graph Representation </b> is represting a graph in a computer memory. Graphs are commonly represnted in two ways. One using Adjacency Matrix<br>
+            and other using Adjacency List.
+            <i>The code for Adjacency Matrix and list are in the console</i>
+            <br><br><b>Psuedo Code for BFS</b> <br>
+            <li>Initialize a queue </li>
+            <li>Add the first node to queue</li>
+            <li>Dequeue it to the visited array and add the adjacent nodes to the queue</li>
+            <li>Dequeue the node from front of queue add to visited and add a new adjacent node to the tail of the queue</li>
+            <li>Repeat Step 3 and 4 until the queue is empty</li>
+            This way the child nodes are visited first then the traversal moves onto the next layer child nodes.
+            <br><br><b>Psuedo Code for DFS</b>
+            <li>Initialize a Stack</li>
+            <li>Add first node to the stack</li>
+            <li>Pop the top element and add that to visited array</li>
+            <li>Push the adjacent elements to the stack on top of each other</li>
+            <li>Pop the top adjacent node element and push to visited array and push a new adjacent element on top of stack</li>
+            <li>Repeat the last two steps until queue is empty</li>
+            This way the graph traversal happens in one direction and when completed the traversal on one side it moves to the top layer and then continues on that tree towards leaf.
+            <br><br>
+            <b>What is Bit manipulatin?</b>
+            <i>Bit Manipulation is</i> performing operation on bytes or bit like AND, OR, NOT, XOR. It is used for data compression by changing it from one represtation to another or encryption
+            <li>AND Operation performs the multiplication operation on bits. for example, A= 101 B = 011 , A&B = 001</li>
+            <li>OR operation performs the binary addition operation  but  If tleast one input has 1 the output will be 1. for example ,A =101, B= 011 , AorB=111 </li>
+            <li>NOT operation reverses a bit, For example, A = 1 NOT(A) = 0</li>
+            <li>XOR operation performs the Exclusive or operation or addition of bits. A =101, B= 011 , A XOR B=110 </li>
+            </p>
+        <script src='cshw4.js'></script>
+    </body>
+</html>

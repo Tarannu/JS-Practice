@@ -49,6 +49,28 @@
         else insert at right<br>
         The time complaxity for this whole operation is <b>O(logn)</b><br>
     </p>
+    <h3>Max Heap Operations</h3>
+    <P><b>Insert operation</b><br>
+        step1: Increase heap size by 1<br>
+        step2 : Insert element at the left most leaf node with no child<br>
+        step3: if(element< parentnode)<br>
+        swap(element,parentnode)<br>
+        This operation takes <b>O(logn)</b><br>
+        <b>Delete Operation</b><br>
+        step1: Swap last node with root node<br>
+        step2: Delete last node by reducing heap size by 1<br>
+        step3: Compare the root node with left and right node<br>
+        if(left>root) swap(left,root) <br>
+        else swap(right,root)<br>
+        The time compleity for this is <b>O(nlogn)</b>
+        <b>Heap Operation</b><br>
+        Step1: Compare root element with left element<br>
+        Step2: if( root< left ) swap(root,left)<br>
+        else if(root < righ) swap(root,right)<br>
+        else do nothing<br>
+        The time complexity with heapify is <b>O(logn)</b><br> 
+
+    </P>
     <script src="csHW3.js"></script>
 </body>
 </html>
