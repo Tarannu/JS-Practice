@@ -8,6 +8,7 @@ var dispatchButton=document.getElementById('dispatch-button');
 var addToOderButton=document.getElementById('add-to-ordered');
 
 
+
 //functions
 
 function addPendingTable(){
@@ -55,19 +56,8 @@ addOrderTable(row);
 }
  
 function addOrderTable(row){
-    // if(e.target.className==='delete-button'){
-    //     var row=e.target.parentElement.parentElement;
-    //     orderedTable.insertRow(row);
-    // }
     orderedTable.insertAdjacentElement('beforeend',row);
-    // var newRow=orderedTable.insertRow(orderedTable.length);
-    // cell1=newRow.insertCell(0);
-    // cell2=newRow.insertCell(1);
-    // cell3=newRow.insertCell(2);
-    // //add value to the cells
-    // cell1.innerHTML=row.cell[0].innerHTML;
-    // cell2.innerHTML=e.target.childNodes[1];
-    // cell3.innerHTML=e.target.childNodes[2];
+   
 }
 
 
