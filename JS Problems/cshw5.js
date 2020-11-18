@@ -170,23 +170,52 @@ var sumOfDigits=num=>{
 }
 
 //palindrome string
-var pallString='raceacar'
+var pallString='anna'
 var validpallindrome=function(s){
-    let mid=s.length/2;
-    var reverse=function(begin,end){
-        temp=s.charAt(begin);
-        s.charAt(begin)=s.charAt(end);
-        s.charAt(end)=temp;
-        return s;
+    if(s.length<2) return 'true';
+    if(s[0]==s[s.length-1]){
+        return validpallindrome(s.slice(1,s.length-1));
     }
-    var newReverse=reverse(mid,s.length);
-    if(newReverse.charAt(0)!=s.charAt(0)) return false;
-    else return true;
-
-
+    return 'false';
 }
 
 var pallindrome=validpallindrome(pallString);
-console.log(pallindrome);
+console.log("Is it palindrome? ",pallindrome);
 
+//binarry search tree sort
+console.log("Before sort tree is ");
+console.log(tree);
+var sortedArray=[]
+var sortTree=root=>{
+    
+    if(root !=null){
+        this.sortTree(root.left);
+        sortedArray.push(root.data);
+        this.sortTree(root.right);
+    }
+
+    
+
+}
+sortTree(tree.root);
+console.log("Tree after sorting in an array ",sortedArray);
+
+//finding subseuquence
+
+var subsequence=(str1,str2,m,n)=>{
+    if(m==0) return true;
+    if(n==0) return false;
+    if(str1[m]==str2[n]){
+    subsequence(str1,str2,m-1,n-1);
+    }
+    else subsequence(str1,str2,m,n-1);
+
+}
+str1='hac';
+str2='cathac';
+var validity='';
+if(subsequence(str1,str2,str1.length,str2.length)) {
+    console.log('True');
+}
+else console.log('false');
 
