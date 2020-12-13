@@ -1,4 +1,3 @@
-
 // document variables
 var studentNameInput=document.getElementById('name-input');
 var studentAgeInput=document.getElementById('age-input');
