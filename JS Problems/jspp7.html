@@ -6,13 +6,40 @@
         </h1>
         
     </header>
-    <div id="studentForm">
+    <body>
+        <div id="user info">
         <h1 >Enter ID information</h1>
         <p > User ID <input type='number' id="id_input"></p> <br>
         <input type="submit" id="submit" onclick="display()"> 
-        <p id="output_para"></p>
+        <p id="output_para1"> </p>
+        <p id="output_para2"> </p>
+        <p id="emailOutput"></p>
     </div>
-    <body>
+    <div id="userTableDiv" >
+        <h1> User table</h1>
+        <button id="loadUserTable">Generate User Table</button>
+    
+        <table id="userTable">
+            <tr>
+                <th>First Name : </th>
+                <th>Last Name: </th>
+            </tr>
+            
+        </table>
+        <button type="button" id="loadMore">Load More</button>
+
+
+    </div>
+    <div>
+        <h1 >Enter User information</h1>
+        <p > First Name <input type='text' id="firstname_input"></p> <br>
+        <p > Job <input type='text' id="job"></p> <br>
+        <button id="create"> Create </button>
+        <p id="createOutputPara"> </p>
+        
+    </div>
+    
         <script src="jspp7.js"></script>
+        <link href="jspp7.css" rel="stylesheet" type="text/css">
     </body>
 </html>
