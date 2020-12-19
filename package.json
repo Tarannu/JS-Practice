@@ -1,0 +1,24 @@
+{
+  "name": "js-practice",
+  "version": "1.0.0",
+  "description": "> A bridge to becoming even better\r ---\r ## Description\r This repository contains HTML and CSS to create basic web pages to advanced usages of JAVA Script to modify web pages. Starting from creating a variable in JS to DOM manupulation",
+  "main": "index.js",
+  "dependencies": {
+    "leaflet": "file:node_modules/leaflet",
+    "parcel": "^1.12.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tarannu/JS-Practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tarannu/JS-Practice/issues"
+  },
+  "homepage": "https://github.com/Tarannu/JS-Practice#readme"
+}
